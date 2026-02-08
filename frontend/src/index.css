@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0f0f1e;
+  --bg-card: rgba(30, 30, 50, 0.8);
+  --border: rgba(100, 100, 140, 0.2);
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-secondary: rgba(255, 255, 255, 0.55);
+  --accent: #667eea;
+  --accent-2: #764ba2;
+  --green: #4ade80;
+  --yellow: #fbbf24;
+  --red: #f87171;
+  --orange: #fb923c;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a2e 100%);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.2s;
+}
+.card:hover {
+  border-color: rgba(100, 100, 140, 0.4);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Command Center table */
+.cc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.cc-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-primary);
+}
+.cc-table th {
+  padding: 6px 8px;
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+}
+.cc-table td {
+  padding: 4px 8px;
+  height: 36px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(100, 100, 140, 0.08);
+  white-space: nowrap;
+}
+.cc-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+.cc-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mono {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+.status-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 32px;
+  padding: 0 12px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 15, 30, 0.6);
+}
+.status-strip span {
+  white-space: nowrap;
+}
+
+@keyframes glow-left {
+  0%, 100% { border-left-color: rgba(102, 126, 234, 0.6); }
+  50% { border-left-color: rgba(102, 126, 234, 0.2); }
+}
+.recent-glow {
+  border-left: 2px solid rgba(102, 126, 234, 0.6);
+  animation: glow-left 2s ease-in-out infinite;
+}

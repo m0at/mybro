@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# API Keys
+*_api_key.txt
+credentials.json
+
+# Database files (local SQLite tracked in ~/.mybro/)
+*.db
+*.sqlite
+*.sqlite3
+
+# Node
+node_modules/
+
+# Build
+frontend/dist/
+
+# Screenshots (stored in ~/.mybro/screenshots/)
+screenshots/
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
