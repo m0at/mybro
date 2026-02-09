@@ -49,3 +49,4 @@ screenshots/
 .pytest_cache/
 .coverage
 htmlcov/
+mybro.app/
